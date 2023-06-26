@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfExamination.DB;
+using WpfExamination.Models;
+using WpfExamination.ViewModels;
 
 namespace WpfExamination
 {
@@ -23,6 +26,25 @@ namespace WpfExamination
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Sign(object sender, RoutedEventArgs e)
+        {
+            var res = AviaSalesContext.GetInstance().Users.FirstOrDefault(s=>s.Login == txt_login.Text && s.Password == txt_password.Text);
+            {
+                if (res == null)
+                {
+                    MessageBox.Show("Не верно");
+                   
+                }
+                else 
+                {
+                    Spisok s = new Spisok();
+                    s.Show();
+                    this.Close();
+                }
+            }
+           
         }
     }
 }

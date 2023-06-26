@@ -43,5 +43,12 @@ namespace WpfExamination
             AddAirplane addAirplane = new AddAirplane();
             addAirplane.Show();
         }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            m.Show();
+            this.Close();
+        }
     }
 }

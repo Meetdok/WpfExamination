@@ -20,5 +20,6 @@
         <Button Content="Рэйчик" Click="Update" HorizontalAlignment="Left" Margin="-147,-2,0,0" VerticalAlignment="Top"/>
         <Button Content="Добавление" Click="Add" HorizontalAlignment="Left" Margin="-72,18,0,0" VerticalAlignment="Top"/>
         <Button Content="Редактирование" Command="{Binding Edit}" HorizontalAlignment="Left" Margin="-94,38,0,0" VerticalAlignment="Top"/>
+        <Button Content="Назад" Click="Back" HorizontalAlignment="Left" Margin="-141,385,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
