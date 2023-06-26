@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfExamination.Spisok"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExamination"
+        mc:Ignorable="d"
+        Title="Список" Height="450" Width="800" Background="#FF903232">
+    <Grid Margin="146,0,0,0">
+        <ListView ItemsSource="{Binding Airplanes}" SelectedItem="{Binding SelectedAirplane}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Навазние" DisplayMemberBinding="{Binding AirplaneTitle}"/>
+                    <GridViewColumn Header="Места" DisplayMemberBinding="{Binding Places}"/>
+                    <GridViewColumn Header="Класс" DisplayMemberBinding="{Binding Class.ClassName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Удалить" Command="{Binding Delete}" HorizontalAlignment="Left" Margin="-48,-2,0,0" VerticalAlignment="Top"/>
+        <Button Content="Рэйчик" Click="Update" HorizontalAlignment="Left" Margin="-147,-2,0,0" VerticalAlignment="Top"/>
+        <Button Content="Добавление" Click="Add" HorizontalAlignment="Left" Margin="-72,18,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
