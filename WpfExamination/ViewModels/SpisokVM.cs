@@ -13,9 +13,12 @@ namespace WpfExamination.ViewModels
 {
     internal class SpisokVM
     {
-        public List<Airplane> Airplanes { get; set; }
+        public List<Airplane> Airplanes { get; set; } //ДЛЯ ЛИСТА
+
+        public Airplane airplanes; // ДЛЯ РЕДАКТИРОВАНИЕ
         public CommandVM Delete { get; set; }
-        public Airplane SelectedAirplane { get; set; }
+        public CommandVM Edit { get; set; }
+        public Airplane SelectedAirplane { get; set; } // ДЛЯ УДАЛЕНИЯ/РЕДАКТИРОВАНИЯ
 
         public SpisokVM()
        {            
@@ -32,6 +35,11 @@ namespace WpfExamination.ViewModels
                 {
                     MessageBox.Show("Ошибка");
                 }
+            });
+
+            Edit = new CommandVM(() => {   //РЕДАКТИРОВАНИЕ
+                airplanes = SelectedAirplane;
+                new Edit(SelectedAirplane).Show();
             });
         }
     }

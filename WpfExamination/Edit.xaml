@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfExamination.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExamination"
+        mc:Ignorable="d"
+        Title="Редактирование" Height="450" Width="419">
+    <Grid>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="62,68,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding EditAirplane.Title}" HorizontalAlignment="Center" Margin="0,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label  Content="Колличество мест" HorizontalAlignment="Left" Margin="16,94,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding EditAirplane.Seats}" HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <Label Content="Класс" HorizontalAlignment="Left" Margin="84,125,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding AirplanesClass}" SelectedItem="{Binding EditAirplane.SelectedClass}" DisplayMemberPath="ClassName" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="170"/>
+        <Button Content="Изменить" Command="{Binding EditAir}" HorizontalAlignment="Center" Margin="0,274,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

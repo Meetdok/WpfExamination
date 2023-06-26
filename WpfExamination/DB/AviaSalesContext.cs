@@ -13,7 +13,6 @@ namespace WpfExamination.DB
         }
 
         static AviaSalesContext instance;
-
         public static AviaSalesContext GetInstance()
         {
             if(instance == null)

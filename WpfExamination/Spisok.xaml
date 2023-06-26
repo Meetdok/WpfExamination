@@ -19,5 +19,6 @@
         <Button Content="Удалить" Command="{Binding Delete}" HorizontalAlignment="Left" Margin="-48,-2,0,0" VerticalAlignment="Top"/>
         <Button Content="Рэйчик" Click="Update" HorizontalAlignment="Left" Margin="-147,-2,0,0" VerticalAlignment="Top"/>
         <Button Content="Добавление" Click="Add" HorizontalAlignment="Left" Margin="-72,18,0,0" VerticalAlignment="Top"/>
+        <Button Content="Редактирование" Command="{Binding Edit}" HorizontalAlignment="Left" Margin="-94,38,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
