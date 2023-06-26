@@ -40,7 +40,8 @@ namespace WpfExamination
 
         private void Add(object sender, RoutedEventArgs e)
         {
-
+            AddAirplane addAirplane = new AddAirplane();
+            addAirplane.Show();
         }
     }
 }
